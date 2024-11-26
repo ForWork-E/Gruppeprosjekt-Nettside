@@ -1,12 +1,48 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
 
 .site-header {
-    width: 100%;
-    height: 550px; /*trenger mulig endring*/
-    background-image: url('header.svg');
-    background-size: cover;
-    background-position: fill;
-    background-repeat: no-repeat;
+  width: 100vw;
+  height: 10rem;
+  background: rgb(165, 40, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 10%,
+    rgba(165, 40, 40, 1) 20%,
+    rgba(125, 27, 27, 1) 30%,
+    rgba(165, 40, 40, 1) 40%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 60%,
+    rgba(125, 27, 27, 1) 70%,
+    rgba(165, 40, 40, 1) 80%,
+    rgba(125, 27, 27, 1) 90%,
+    rgba(165, 40, 40, 1) 100%
+  );
+}
+
+.triangle-left {
+  width: 20rem; /* Juster etter ønsket størrelse */
+  height: 20rem; /* Juster etter ønsket størrelse */
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 10%,
+    rgba(165, 40, 40, 1) 20%,
+    rgba(125, 27, 27, 1) 30%,
+    rgba(165, 40, 40, 1) 40%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 60%,
+    rgba(125, 27, 27, 1) 70%,
+    rgba(165, 40, 40, 1) 80%,
+    rgba(125, 27, 27, 1) 90%,
+    rgba(165, 40, 40, 1) 100%
+  );
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  margin-top: 0; /* Fjern unødvendig mellomrom */
 }
