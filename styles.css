@@ -5,7 +5,8 @@
 .site-header {
     width: 100%;
     height: 550px; /*trenger mulig endring*/
-    background-image: url('header.svg');
+    background-image: url('Images/header.svg'); *
+    /* Har endret denne fra header.svg til Images/header.svg på grunn av flytting av bildet til eget folder - Tor*/
     background-size: cover;
     background-position: fill;
     background-repeat: no-repeat;
