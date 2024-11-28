@@ -1,3 +1,4 @@
+
 /* Global Reset */
 * {
   margin: 0;
@@ -35,6 +36,11 @@ body.dark .menu-dropdown {
 
 body.dark .menu-dropdown button {
   color: white;
+* {box-sizing: border-box}
+/*hans lagde header + logo*/
+body {
+  margin: 0;
+  position: relative;
 }
 
 .site-header {
@@ -67,6 +73,7 @@ body.dark .menu-dropdown button {
     height: auto;
   }
 
+
 .triangle-left {
   width: 20%; 
   height: 25rem; 
@@ -98,8 +105,13 @@ body.dark .menu-dropdown button {
   top: 10rem;
   z-index: 2;
 }
+
 .menu-button {
   background-image: url('Images/menu-frame.svg');
+
+.menu-button {
+  background-image: url('images/menu-frame.svg');
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -113,6 +125,7 @@ body.dark .menu-dropdown button {
   cursor: pointer;
   z-index: 9999;
 }
+
 /* Global Styles for Dropdown */
 .menu-dropdown {
   display: none; /* Default is hidden for both mobile and desktop */
@@ -138,6 +151,42 @@ body.dark .menu-dropdown button {
   width: 100%;
 }
 
+
+
+
+.menu-button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background-color: #FF5733;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba (255, 255, 255, 0.2);
+}
+
+.menu-button.active + .dropdown-menu {
+  display: block;
+}
+/* fjærnet gammel header som var svg og laget nå med 100% css -hans*/
+
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
 
 img {vertical-align: middle;}
 
@@ -261,3 +310,4 @@ img {vertical-align: middle;}
     width: 100%;
   }
 }
+
