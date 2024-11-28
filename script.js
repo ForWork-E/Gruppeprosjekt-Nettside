@@ -1,3 +1,13 @@
+/*drop down*/
+const menuButton =  document.querySelector('.menu-button');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+menuButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('active');
+});
+
+/*addedt dropdown meny og funksjon. ikke helt funkjonerbar enda -hans*/
+  
 let slideIndex = 1;
 
 
@@ -29,3 +39,4 @@ function showSlides(n) {
     }
 
     slideIndex.addEventlistener("click",showSlides)
+

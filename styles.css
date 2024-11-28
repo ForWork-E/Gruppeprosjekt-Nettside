@@ -1,13 +1,119 @@
 * {box-sizing: border-box}
+/*hans lagde header + logo*/
+body {
+  margin: 0;
+  position: relative;
+}
 
 .site-header {
-  width: 100%;
-  height: 550px; /*trenger mulig endring*/
-  background-image: url('Images/header.svg'); *
-  /* Har endret denne fra header.svg til Images/header.svg på grunn av flytting av bildet til eget folder - Tor*/
-  background-size: cover;
-  background-position: fill;
-  background-repeat: no-repeat; }
+  width: 100vw;
+  height: 12rem;
+  background: rgb(165, 40, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 10%,
+    rgba(165, 40, 40, 1) 20%,
+    rgba(125, 27, 27, 1) 30%,
+    rgba(165, 40, 40, 1) 40%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 60%,
+    rgba(125, 27, 27, 1) 70%,
+    rgba(165, 40, 40, 1) 80%,
+    rgba(125, 27, 27, 1) 90%,
+    rgba(165, 40, 40, 1) 100%
+    );
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+.triangle-left {
+  width: 20%; 
+  height: 25rem; 
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 100%
+   );
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  left: 0;
+}
+
+.triangle-right {
+  width: 20%; 
+  height: 25rem; 
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 100%
+  );
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  right: 0;
+}
+
+.triangle-left, .triangle-right {
+  position: absolute;
+  top: 10rem;
+  z-index: 2;
+}
+
+.menu-button {
+  background-image: url('images/menu-frame.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.menu-button:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background-color: #FF5733;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba (255, 255, 255, 0.2);
+}
+
+.menu-button.active + .dropdown-menu {
+  display: block;
+}
+/* fjærnet gammel header som var svg og laget nå med 100% css -hans*/
 
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -98,3 +204,4 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
