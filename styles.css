@@ -1,17 +1,148 @@
-* {box-sizing: border-box}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Light Theme */
+body.light {
+  background-color: #ffffff;
+}
+
+body.light .menu-dropdown {
+  background-color: #f1f1f1; /* Light background for dropdown */
+  color: black;
+}
+
+body.light .menu-dropdown button {
+  color: black;
+}
+
+body.dark {
+  background-color: #535353;
+}
+
+body.dark .menu-dropdown {
+  background-color: #333333; /* Dark background for dropdown */
+  color: white;
+}
+
+body.dark .menu-dropdown button {
+  color: white;
+}
 
 .site-header {
-  width: 100%;
-  height: 550px; /*trenger mulig endring*/
-  background-image: url('Images/header.svg'); *
-  /* Har endret denne fra header.svg til Images/header.svg på grunn av flytting av bildet til eget folder - Tor*/
-  background-size: cover;
-  background-position: fill;
-  background-repeat: no-repeat; }
+  width: 100vw;
+  height: 12rem;
+  background: rgb(165, 40, 40);
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 10%,
+    rgba(165, 40, 40, 1) 20%,
+    rgba(125, 27, 27, 1) 30%,
+    rgba(165, 40, 40, 1) 40%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 60%,
+    rgba(125, 27, 27, 1) 70%,
+    rgba(165, 40, 40, 1) 80%,
+    rgba(125, 27, 27, 1) 90%,
+    rgba(165, 40, 40, 1) 100%
+    );
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+.triangle-left {
+  width: 20%; 
+  height: 25rem; 
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 100%
+   );
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  left: 0;
+}
+
+.triangle-right {
+  width: 20%; 
+  height: 25rem; 
+  background: linear-gradient(
+    90deg,
+    rgba(165, 40, 40, 1) 0%,
+    rgba(125, 27, 27, 1) 50%,
+    rgba(165, 40, 40, 1) 100%
+  );
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  right: 0;
+}
+
+.triangle-left, .triangle-right {
+  position: absolute;
+  top: 10rem;
+  z-index: 2;
+}
+.menu-button {
+  background-image: url('Images/menu-frame.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+/* Global Styles for Dropdown */
+.menu-dropdown {
+  display: none; /* Default is hidden for both mobile and desktop */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333333;
+  border: 3px solid #666666;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgb(243, 4, 4);
+  z-index: 100;
+  padding: 10px;
+  width: auto;
+  max-width: 200px;
+}
+.menu-dropdown button {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 1px 5px;
+  font-size: 1em;
+  width: 100%;
+}
+
+
 img {vertical-align: middle;}
+
+.mySlides {display: none}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -97,4 +228,36 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/* Mobile Specific Styles */
+@media screen and (max-width: 768px) {
+  .menu-button {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  .menu-dropdown {
+    top: 100px; /* Adjust dropdown position on mobile */
+    right: 0;
+    width: 100%;
+  }
+}
+
+/* Desktop Specific Styles */
+@media screen and (min-width: 769px) {
+  .menu-button {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
+
+  .menu-dropdown {
+    top: 100px; /* Adjust dropdown position on desktop */
+    right: 0;
+    width: 100%;
+  }
 }
