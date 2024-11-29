@@ -1,16 +1,4 @@
-
 // Slide Show Logic
-
-/*drop down*/
-const menuButton =  document.querySelector('.menu-button');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-menuButton.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('active');
-});
-
-/*addedt dropdown meny og funksjon. ikke helt funkjonerbar enda -hans*/
-  
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -86,5 +74,3 @@ if (toggleThemeButton) {
         }
     });
 }
-    slideIndex.addEventlistener("click",showSlides)
-
